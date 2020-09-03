@@ -7,7 +7,7 @@ if [[ "${ASDF_INSTALL_TYPE:-version}" == 'ref' ]]; then
   exit 1
 fi
 
-if command -v pip3 &> /dev/null; then
+if command -v pip3 > /dev/null; then
   pip3 install --target="${ASDF_INSTALL_PATH}" pre-commit=="${ASDF_INSTALL_VERSION}"
 else
   pip install --target="${ASDF_INSTALL_PATH}" pre-commit=="${ASDF_INSTALL_VERSION}"
